@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class AddAdminCommand extends Command
@@ -45,7 +46,7 @@ class AddAdminCommand extends Command
         $user->email = $this->argument('email');
         $user->email_verified_at = now();
         $user->is_admin = true;
-        $user->password = bcrypt($this->argument('password'));
+        $user->password = Hash::make($this->argument('password'));
         $user->remember_token = Str::random(10);
 
         $user->save();
