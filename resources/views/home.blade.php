@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{__('Welcome to')}} {{ config('app.name') }}!
                 </div>
             </div>
         </div>

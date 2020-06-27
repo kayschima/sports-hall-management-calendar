@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/sports','SportsController@index');
+Route::get('/halls','HallController@index');

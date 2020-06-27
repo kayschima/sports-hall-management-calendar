@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sports">{{ __('Sports') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/halls">{{ __('Halls') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/trainingtimes">{{ __('Trainingtimes') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +85,6 @@
             @yield('content')
         </main>
     </div>
+    @livewireScripts
 </body>
 </html>
