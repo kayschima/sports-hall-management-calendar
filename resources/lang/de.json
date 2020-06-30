@@ -2,6 +2,7 @@
     "A fresh verification link has been sent to your email address.": "Ein neuer Verifizierungslink wurde verschickt.",
     "Add sports": "Sportart hinzufügen",
     "Add hall": "Halle hinzufügen",
+    "Admin": "Administrator",
     "All rights reserved.": "Alle Rechte vorbehalten.",
     "Before proceeding, please check your email for a verification link.": "Bevor Sie fortfahren, überprüfen Sie bitte Ihr E-Mail-Postfach auf einen Verifizierungslink.",
     "Cancel": "Abbrechen",
@@ -9,6 +10,7 @@
     "Confirm Password": "Passwort bestätigen",
     "Delete sport": "Lösche Sportart",
     "Delete hall": "Lösche Halle",
+    "Delete user": "Lösche Benutzer",
     "Description": "Beschreibung",
     "Description of the hall": "Beschreibung der Halle",
     "E-Mail Address": "E-Mail-Adresse",
@@ -31,6 +33,7 @@
     "Name": "Name",
     "Name of the hall": "Name der Halle",
     "Name of the sport": "Name der Sportart",
+    "No": "Nein",
     "Not Found": "Nicht gefunden",
     "Oh no": "Oh nein",
     "Page Expired": "Seite abgelaufen",
@@ -62,6 +65,7 @@
     "Trainingtime": "Trainingszeit",
     "Trainingtimes": "Trainingszeiten",
     "Unauthorized": "Nicht autorisiert",
+    "Users": "Benutzer",
     "Verify Email Address": "E-Mail-Adresse bestätigen",
     "Verify Your Email Address": "Bestätigen Sie Ihre E-Mail-Adresse",
     "We won't ask for your password again for a few hours.": "Wir werden Sie für die nächsten paar Stunden nicht mehr nach dem Passwort fragen.",
@@ -69,5 +73,6 @@
     "Your email address is not verified.": "Ihre E-Mail Adresse wurde noch nicht bestätigt.",
     "Welcome to": "Willkommen zu",
     "Whoops!": "Ups!",
-    "Whoops, something went wrong on our servers.": "Ups, etwas ist schief gelaufen."
+    "Whoops, something went wrong on our servers.": "Ups, etwas ist schief gelaufen.",
+    "Yes": "Ja"
 }
