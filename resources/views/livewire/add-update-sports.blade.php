@@ -9,7 +9,7 @@
                 <label for="sportname">{{__('Name of the sport')}}</label>
                 <input type="text" wire:model.lazy="sportname" class="form-control" name="sportname" id="sportname"
                        aria-describedby="helpId" placeholder="{{__('Name of the sport')}}">
-                <div><p>@error('sportname')<small id="helpId" class="text-danger">{{ $message }}</small></p>@enderror
+                <div><p>@error('sportname')<small id="helpId" class="text-danger">{{ $message }}</small>@enderror</p>
                 </div>
             </div>
             <div class="form-group">
