@@ -21,7 +21,7 @@ class AddAdminCommand extends Command
      *
      * @var string
      */
-    protected $description = 'add a admin user to the sports hall management calendar';
+    protected $description = 'Add a admin user to the sports hall management calendar';
 
     /**
      * Create a new command instance.
