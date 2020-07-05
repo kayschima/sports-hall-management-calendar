@@ -27,8 +27,9 @@
             <th class="text-center">{{__('Sport')}}</th>
             <th class="text-center">{{__('Hall')}}</th>
             <th class="text-center">{{__('Description')}}</th>
-            <th class="text-center">{{__('Slots')}}</th>
             <th class="text-center">{{__('When')}}?</th>
+            <th class="text-center">{{__('Slots')}}</th>
+            <th class="text-center">{{__('Attendees')}}</th>
             <th></th>
         </tr>
         </thead>
@@ -39,9 +40,10 @@
                 <td class="text-center">{{$trainingtime->sports->name}}</td>
                 <td class="text-center">{{$trainingtime->hall->name}}</td>
                 <td class="text-center">{{$trainingtime->description}}</td>
-                <td class="text-center">{{$trainingtime->slots}}</td>
                 <td class="text-center">{{$trainingtime->date->format('d.m.y')}}
                     , {{$trainingtime->time->format('H:i')}}</td>
+                <td class="text-center">{{$trainingtime->slots}}</td>
+                <td class="text-center">{{$trainingtime->participations_count}}</td>
                 <td class="text-center">
                     <button type="button" class="btn btn-danger btn-xs"
                             wire:click="deleteTrainingtime({{$trainingtime->id}})">

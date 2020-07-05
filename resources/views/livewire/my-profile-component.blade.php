@@ -1,13 +1,17 @@
 <div>
     <div class="card mb-3 mx-auto">
         <div class="row no-gutters">
-            <div class="col-md-4">
+            <div class="col-md-4 border-right">
                 @if(!is_null($user->photo))
                     <img src="/{{$user->photo}}" class="card-img-top" alt="...">
-                    <button type="button" class="btn btn-primary"
-                            wire:click="deletePhoto">{{__('Delete photo')}}</button>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary"
+                                wire:click="deletePhoto">{{__('Delete photo')}}</button>
+                    </div>
                 @else
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="{{__('Placeholder')}}: {{__('No photo')}}">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="100%"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                         role="img" aria-label="{{__('Placeholder')}}: {{__('No photo')}}">
                         <title>{{__('Placeholder')}}</title>
                         <rect width="100%" height="100%" fill="#868e96"></rect>
                         <text x="35%" y="50%" fill="#dee2e6">{{__('No photo')}}</text>
@@ -34,6 +38,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <a href="/deletemyaccount" class="btn btn-danger btn-block">{{__('Delete my account')}}</a>
     </div>
     <div class="d-flex justify-content-center">
         <div wire:loading class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
