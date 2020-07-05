@@ -15,9 +15,10 @@ class CreateTrainingTimesTable extends Migration
     {
         Schema::create('training_times', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hall_id')->constrained('halls');
-            $table->foreignId('sports_id')->constrained('sports');
+            $table->foreignId('hall_id')->constrained('halls')->cascadeOnDelete();
+            $table->foreignId('sports_id')->constrained('sports')->cascadeOnDelete();
             $table->string('description');
+            $table->integer('slots');
             $table->date('date');
             $table->time('time');
             $table->timestamps();

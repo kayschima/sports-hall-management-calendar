@@ -24,4 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/sports','SportsController@index');
 Route::get('/halls','HallController@index');
 Route::get('/users','UserController@index');
+Route::get('/trainingtimes','TrainingTimeController@index');
 Route::get('/profile','UserController@myProfile');

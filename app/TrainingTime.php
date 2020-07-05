@@ -7,12 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 class TrainingTime extends Model
 {
     protected $guarded = [];
+    protected $dates =['date','time'];
 
     public function hall() {
-        $this->belongsTo(Hall::class);
+        return $this->BelongsTo(Hall::class);
     }
 
-    public function users() {
-        $this->hasMany(User::class);
+    public function sports() {
+        return $this->BelongsTo(Sports::class);
+    }
+
+    public function participations() {
+        return $this->hasMany(Participation::class);
     }
 }

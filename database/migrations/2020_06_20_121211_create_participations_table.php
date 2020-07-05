@@ -15,8 +15,8 @@ class CreateParticipationsTable extends Migration
     {
         Schema::create('participations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('training_time_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('training_time_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
