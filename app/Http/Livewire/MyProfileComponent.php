@@ -41,7 +41,13 @@ class MyProfileComponent extends Component {
             ->update(['photo' => null]);
 
         $this->user = User::find(Auth::id());
+    }
 
+    public function deleteMyAccount() {
+        sleep(5);
+        User::destroy(auth()->id());
+        Auth::logout();
+        return redirect('/');
     }
 
     public function render() {

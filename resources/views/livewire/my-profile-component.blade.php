@@ -40,7 +40,7 @@
         </div>
     </div>
     <div>
-        <a href="/deletemyaccount" class="btn btn-danger btn-block">{{__('Delete my account')}}</a>
+        <button wire:click="deleteMyAccount()" class="btn btn-danger btn-block">{{__('Delete my account')}}</button>
     </div>
     <div class="d-flex justify-content-center">
         <div wire:loading class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
