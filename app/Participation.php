@@ -4,14 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Participation extends Model
-{
-    public function user(  ) {
-        $this->belongsTo(User::class);
+class Participation extends Model {
+
+    protected $guarded = [];
+
+    public function user() {
+        return $this->belongsTo( User::class );
     }
 
-    public function trainingTime(  ) {
-        $this->belongsTo(TrainingTime::class);
+    public function trainingTime() {
+        return $this->belongsTo( TrainingTime::class );
     }
 
 }

@@ -34,9 +34,11 @@
                 <th class="text-center">{{__('Max. slots')}}</th>
                 <th class="text-center">{{__('Attendees')}}</th>
                 <th>
-                    <button type="button" class="btn btn-primary btn-sm float-right"
-                            wire:click="addTrainingtime(null)">{{__('Add trainingtime')}}
-                    </button>
+                    @can('isAdministrator', auth()->user())
+                        <button type="button" class="btn btn-primary btn-sm float-right"
+                                wire:click="addTrainingtime(null)">{{__('Add trainingtime')}}
+                        </button>
+                    @endcan
                 </th>
             </tr>
             </thead>
