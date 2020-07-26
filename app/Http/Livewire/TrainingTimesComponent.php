@@ -28,10 +28,14 @@ class TrainingTimesComponent extends Component {
 
     public function mount() {
         $this->allHalls = Hall::all();
-        $this->hallid   = $this->allHalls->first()->id;
+        if ( $this->allHalls->isNotEmpty() ) {
+            $this->hallid = $this->allHalls->first()->id;
+        }
 
         $this->allSports = Sports::all();
-        $this->sportid   = $this->allSports->first()->id;
+        if ( $this->allSports->isNotEmpty() ) {
+            $this->sportid = $this->allSports->first()->id;
+        }
 
         $this->newID          = null;
         $this->newDescription = null;
@@ -67,6 +71,10 @@ class TrainingTimesComponent extends Component {
         }
 
         $this->isDialogVisible = true;
+    }
+
+    public function deleteTrainingtime( $trainingtime_id ) {
+        TrainingTime::destroy( [ $trainingtime_id ] );
     }
 
     public function closeDialog() {
@@ -105,7 +113,7 @@ class TrainingTimesComponent extends Component {
             $trainingstimes = $trainingstimes->where( 'hall_id', $this->hallid );
         }
 
-        $trainingstimes = $trainingstimes->withCount( 'participations' )->get();
+        $trainingstimes = $trainingstimes->withCount( 'users' )->get();
 
         return view( 'livewire.training-times-component', [
             'trainingtimes' => $trainingstimes,

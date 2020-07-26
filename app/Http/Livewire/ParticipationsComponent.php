@@ -13,27 +13,18 @@ class ParticipationsComponent extends Component {
         $this->trainingtime_id = $trainingtime_id;
     }
 
-    public function attachParticipation() {
-        Participation::create( [
-            'training_time_id' => $this->trainingtime_id,
-            'user_id'          => auth()->id()
-        ] );
-    }
-
-    public function detachParticipation( $user_id ) {
-        Participation::where( 'user_id', $user_id )
-                     ->where( 'training_time_id', $this->trainingtime_id )
-                     ->delete();
+    public function toggleParticipation( $user_id ) {
+        TrainingTime::find( $this->trainingtime_id )->users()->toggle( [ $user_id ] );
     }
 
     public function render() {
-        $participations = Participation::with( [ 'user', 'trainingTime' ] )
-                                       ->where( 'training_time_id', $this->trainingtime_id )->get();
+        $participations = TrainingTime::with( [ 'users' ] )
+                                      ->where( 'id', $this->trainingtime_id )->first();
 
         return view( 'livewire.participations-component', [
             'participations'       => $participations,
-            'maxSlots'             => TrainingTime::find( $this->trainingtime_id )->slots,
-            'alreadyParticipating' => $participations->pluck( 'user.id' )->contains( auth()->id() )
+            'maxSlots'             => $participations->slots,
+            'alreadyParticipating' => $participations->users->pluck( 'id' )->contains( auth()->id() )
         ] );
     }
 }

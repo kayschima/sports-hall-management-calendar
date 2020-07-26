@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        factory( App\User::class, 50 )->create();
+
+        \App\User::find( 1 )->update( [
+            'is_admin'          => 1,
+            'email_verified_at' => now()
+        ] );
     }
 }

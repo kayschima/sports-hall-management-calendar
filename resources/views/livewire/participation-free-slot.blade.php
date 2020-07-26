@@ -7,7 +7,7 @@
     <div class="card-body">
         <h5 class="card-title text-center">{{__('Free slot')}}</h5>
         @if ( ! $alreadyParticipating)
-            <a wire:click="attachParticipation()"
+            <a wire:click="toggleParticipation({{auth()->id()}})"
                class="btn btn-block btn-outline-primary">{{__('Occupy training slot')}}</a>
         @endif
     </div>

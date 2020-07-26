@@ -52,7 +52,7 @@
                     <td class="text-center">{{$trainingtime->date->format(config('shmc.dateformat'))}}
                         , {{$trainingtime->time->format(config('shmc.timeformat'))}}</td>
                     <td class="text-center">{{$trainingtime->slots}}</td>
-                    <td class="text-center">{{$trainingtime->participations_count}}</td>
+                    <td class="text-center">{{$trainingtime->users_count}}</td>
                     <td class="text-center">
                         @can('isAdministrator', auth()->user())
                             <button type="button" class="btn btn-danger btn-xs"
