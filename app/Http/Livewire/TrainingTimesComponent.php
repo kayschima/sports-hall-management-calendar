@@ -28,14 +28,10 @@ class TrainingTimesComponent extends Component {
 
     public function mount() {
         $this->allHalls = Hall::all();
-        if ( $this->allHalls->isNotEmpty() ) {
-            $this->hallid = $this->allHalls->first()->id;
-        }
+        $this->hallid   = session()->get( 'shmc_hallid', 1 );
 
         $this->allSports = Sports::all();
-        if ( $this->allSports->isNotEmpty() ) {
-            $this->sportid = $this->allSports->first()->id;
-        }
+        $this->sportid   = session()->get( 'shmc_sportid', 1 );
 
         $this->newID          = null;
         $this->newDescription = null;
@@ -47,6 +43,12 @@ class TrainingTimesComponent extends Component {
 
         $this->isDialogVisible = false;
     }
+
+    public function updated( $name, $value ) {
+        session()->put( 'shmc_sportid', $this->sportid );
+        session()->put( 'shmc_hallid', $this->hallid );
+    }
+
 
     public function addTrainingtime( $id ) {
         if ( is_null( $id ) ) {
