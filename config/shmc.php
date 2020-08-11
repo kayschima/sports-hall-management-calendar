@@ -9,8 +9,9 @@ return [
     |
     */
 
-    'dateformat'   => env( 'SHMC_DATEFORMAT', 'Y/m/d' ),
-    'timeformat'   => env( 'SHMC_TIMEFORMAT', 'H:i:s' ),
-    'defaultslots' => env( 'SHMC_DEFAULTSLOTS', 20 ),
+    'dateformat'   => env('SHMC_DATEFORMAT', 'Y/m/d'),
+    'timeformat'   => env('SHMC_TIMEFORMAT', 'H:i:s'),
+    'defaultslots' => env('SHMC_DEFAULTSLOTS', 20),
+    'logo_url'     => env('SHMC_LOGO_URL', ''),
 
 ];
