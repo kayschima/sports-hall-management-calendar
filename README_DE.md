@@ -1,3 +1,5 @@
+<img src="https://github.com/kayschima/sports-hall-management-calendar/raw/master/public/images/sportshallmanagementcalendar.png" width="200" height="200">
+
 # Sports Hall Management Calendar
 ([Klicke alternativ hier für die englische Dokumentation](https://github.com/kayschima/sports-hall-management-calendar/blob/master/README.md))
 
