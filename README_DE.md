@@ -18,7 +18,7 @@ Registrierte Athleten können eine der offenen Stellen für eine Trainingseinhei
 - optional:
     - git (auch gut, um die Software auf dem neuesten Stand zu halten)
     - composer
---- ---.
+---
 ### Installation
 #### Richten Sie die Software ein:
 Holen Sie sich den Sourcecode:
