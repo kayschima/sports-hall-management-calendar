@@ -1,4 +1,5 @@
 # Sports Hall Management Calendar
+([Alternatively, click here for the German documentation](https://github.com/kayschima/sports-hall-management-calendar/blob/master/README_DE.md))
 
 ## About Sports Hall Management Calendar
 
@@ -14,7 +15,7 @@ Registered athletes can reserve one of the vacancies for a training session.
 - Laravel >= 7
 - MySql >= 5.7
 
-- optional for installation:
+- optional:
     - git (also good for keeping the software up to date )
     - composer
 ---
@@ -58,7 +59,7 @@ Execute the command `php artisan shmc:addadmin <name> <email> <password>`, e.g.
 php artisan shmc:addadmin "The Administrator" admin@admin-world.de ThePassword
 ```
 
-### Delete user profile photos that are no longer needed
+###Delete user profile photos that are no longer needed
 If you want to clear up user profile photos that are no longer needed, just run the command
 ```shell
 php artisan shmc:removeunusedphotos
