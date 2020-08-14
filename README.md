@@ -9,16 +9,34 @@ Registered athletes can reserve one of the vacancies for a training session.
 
 ## Documentation
 
+### Server Requirements
+- PHP >= 7.4
+- Laravel >= 7
+- MySql >= 5.7
+
+- optional for installation:
+    - git (also good for keeping the software up to date )
+    - composer
+---
 ### Installation
 #### Setup the software:
+Get the Sources:
+Go to your terminal and type:
 ```shell
 git clone https://github.com/kayschima/sports-hall-management-calendar.git
+```
+or unzip the downloaded ZIP-file at the GitHub page:
+https://github.com/kayschima/sports-hall-management-calendar/archive/master.zip
+
+Now continue with the installation:
+```shell
 cd sports-hall-management-calendar
 cp .env.example .env
 composer install -o --no-dev
 php artisan key_generate
 php artisan storage:link
 ```
+(Do not use the `--no-dev` option if you want to use the package in development mode.)
 
 #### Setup database and environment:
  - config your database parameters and credentials in the `.env` file
@@ -33,7 +51,7 @@ php artisan storage:link
  The Sports Hall Management Calendar supports the languages:
  - English (`APP_LOCALE=en`)
  - German/Deutsch (`APP_LOCALE=de`)
-
+---
 #### Generate a admin user
 Execute the command `php artisan shmc:addadmin <name> <email> <password>`, e.g.
 ```shell
@@ -43,7 +61,7 @@ php artisan shmc:addadmin "The Administrator" admin@admin-world.de ThePassword
 ### Delete user profile photos that are no longer needed
 If you want to clear up user profile photos that are no longer needed, just run the command
 ```shell
-php artisan shmc:removeallusedphotos
+php artisan shmc:removeunusedphotos
 ```
 You can run the command manually via the console or via a cron job at regular intervals
 

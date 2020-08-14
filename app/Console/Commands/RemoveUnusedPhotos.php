@@ -7,13 +7,13 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use Symfony\Component\Finder\Finder;
 
-class RemoveAllUsedPhotos extends Command {
+class RemoveUnusedPhotos extends Command {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'shmc:removeallusedphotos';
+    protected $signature = 'shmc:removeunusedphotos';
 
     /**
      * The console command description.
