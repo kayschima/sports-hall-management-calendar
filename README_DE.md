@@ -60,13 +60,26 @@ Führen Sie den Befehl `php artisan shmc: addadmin <Name> <Mail> <Kennwort>` aus
 ```shell
 php artisan shmc:addadmin "The Administrator" admin@admin-world.de ThePassword
 ```
-
+---
 #### Löschen Sie nicht mehr benötigte Benutzerprofilfotos
-Wenn Sie Benutzerprofilfotos löschen möchten, die nicht mehr benötigt werden, führen Sie einfach den Befehl aus
+Wenn Sie Benutzerprofilfotos löschen möchten, die nicht mehr benötigt werden, führen Sie einfach den Befehl 
 ```shell
 php artisan shmc:removeunusedphotos
 ```
-Sie können den Befehl in regelmäßigen Abständen manuell über die Konsole oder über einen Cron-Job ausführen
+aus.
+
+---
+#### Löschen Sie vergangene Trainingstermine
+Wenn Sie bereits vergangene Trainingstermine löschen möchten, führen Sie einfach den Befehl 
+```shell
+php artisan shmc:removepasttrainings
+```
+aus.
+
+---
+Sie können alle Befehle in regelmäßigen Abständen über das Administrationsmenü, manuell über die Konsole oder über einen Cron-Job ausführen.
+
+---
 
 ## Sicherheitslücken
 

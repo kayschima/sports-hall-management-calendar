@@ -60,13 +60,24 @@ Execute the command `php artisan shmc:addadmin <name> <email> <password>`, e.g.
 ```shell
 php artisan shmc:addadmin "The Administrator" admin@admin-world.de ThePassword
 ```
-
-###Delete user profile photos that are no longer needed
+---
+#### Delete user profile photos that are no longer needed
 If you want to clear up user profile photos that are no longer needed, just run the command
 ```shell
 php artisan shmc:removeunusedphotos
 ```
-You can run the command manually via the console or via a cron job at regular intervals
+
+---
+#### Delete past training times
+If you want to clear up training times photos from the past, just run the command
+```shell
+php artisan shmc:removepasttrainings
+```
+
+---
+You can execute all commands at regular intervals via the administration menu, manually via the console or via a cron job.
+
+---
 
 ## Security Vulnerabilities
 
