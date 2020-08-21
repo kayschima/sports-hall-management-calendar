@@ -68,6 +68,20 @@
                             </li>
                         @endif
                     @else
+                        @can('isAdministrator', auth()->user())
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{__('Administration')}} <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item"
+                                       href="/admin/trainingtimes/deletepast">{{ __('Delete past training times') }}</a>
+                                    <a class="dropdown-item"
+                                       href="/admin/photos/deleteunused">{{ __('Delete unused profile photos') }}</a>
+                                </div>
+                            </li>
+                        @endcan
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

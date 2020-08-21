@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class UserController extends Controller
-{
-    public function __construct() {
-        $this->middleware( 'auth' );
+/**
+ * Class UserController
+ * @package App\Http\Controllers
+ */
+class UserController extends Controller {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index() {
+        return view( 'users' );
     }
 
-    public function index(  ) {
-        return view('users');
-    }
-
-    public function myProfile(  ) {
-        return view('myprofile');
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function myProfile() {
+        return view( 'myprofile' );
     }
 }

@@ -2,15 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class SportsController extends Controller
-{
+/**
+ * Class SportsController
+ * @package App\Http\Controllers
+ */
+class SportsController extends Controller {
+    /**
+     * SportsController constructor.
+     */
     public function __construct() {
-        $this->middleware( 'auth' );
+        $this->middleware( [ 'auth', 'is_admin' ] );
     }
 
-    public function index(  ) {
-        return view('sports');
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index() {
+        return view( 'sports' );
     }
 }

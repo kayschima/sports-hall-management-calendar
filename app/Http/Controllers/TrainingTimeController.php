@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class TrainingTimeController extends Controller
-{
-    public function __construct() {
-        $this->middleware( 'auth' );
-    }
-
-    public function index(  ) {
-        return view('trainingtimes');
+/**
+ * Class TrainingTimeController
+ * @package App\Http\Controllers
+ */
+class TrainingTimeController extends Controller {
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index() {
+        return view( 'trainingtimes' );
     }
 }
