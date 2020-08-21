@@ -115,7 +115,7 @@ class TrainingTimesComponent extends Component {
             $trainingstimes = $trainingstimes->where( 'hall_id', $this->hallid );
         }
 
-        $trainingstimes = $trainingstimes->withCount( 'users' )->get();
+        $trainingstimes = $trainingstimes->withCount( 'users' )->orderBy( 'date' )->orderBy( 'time' )->get();
 
         return view( 'livewire.training-times-component', [
             'trainingtimes' => $trainingstimes,

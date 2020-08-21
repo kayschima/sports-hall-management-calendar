@@ -1,7 +1,7 @@
 <div>
     @if(!$isDialogVisible)
         <div class="row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-5">
                 <label for="sport">{{__('Sport')}}</label>
                 <select wire:model="sportid" class="form-control" name="sport" id="sport">
                     @foreach($allSports as $oneSport)
@@ -9,7 +9,12 @@
                     @endforeach
                 </select>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-2 d-flex justify-content-center">
+                <div wire:loading class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
                 <label for="hall">{{__('Hall')}}</label>
                 <select wire:model="hallid" class="form-control" name="hall" id="hall">
                     @foreach($allHalls as $oneHall)
@@ -18,12 +23,8 @@
                 </select>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <div wire:loading class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <table wire:loading.remove class="table table-striped table-sm table-responsive-md">
+
+        <table class="table table-striped table-sm table-responsive-md">
             <thead>
             <tr>
                 <th class="text-center">#</th>
