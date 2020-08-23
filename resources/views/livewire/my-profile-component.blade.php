@@ -1,10 +1,10 @@
 <div>
-    <div class="card mb-3 mx-auto">
+    <div class="m-2 mx-auto">
         <div class="row no-gutters">
-            <div class="col-md-4 border-right">
+            <div class="col-md-4 p-1 border-right">
                 @if(!is_null($user->photo))
                     <img src="/{{$user->photo}}" class="card-img-top" alt="...">
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex py-2 justify-content-center">
                         <button type="button" class="btn btn-primary"
                                 wire:click="deletePhoto">{{__('Delete photo')}}</button>
                     </div>
@@ -19,7 +19,7 @@
                 @endif
             </div>
             <div class="col-md-8">
-                <div class="card-body">
+                <div class="p-2">
                     <h5 class="card-title">{{__('My profile')}}</h5>
                     <p class="card-text"><b>Name:</b><br>
                         {{ $user->name }}</p>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="p-2">
         <button wire:click="deleteMyAccount()" class="btn btn-danger btn-block">{{__('Delete my account')}}</button>
     </div>
     <div class="d-flex justify-content-center">

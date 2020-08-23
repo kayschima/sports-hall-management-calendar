@@ -1,4 +1,4 @@
-<div class="col-lg-12">
+<div class="col-lg-12 p-2">
     <h2>{{__('My training times')}}</h2>
     <table class="table table-striped table-sm table-responsive-md">
         <thead>
