@@ -54,7 +54,7 @@
                         , {{$trainingtime->time->format(config('shmc.timeformat'))}}</td>
                     <td class="text-center">{{$trainingtime->slots}}</td>
                     <td class="text-center">{{$trainingtime->users_count}}</td>
-                    <td class="text-center">
+                    <td class="text-center text-nowrap">
                         @can('isAdministrator', auth()->user())
                             <button type="button" class="btn btn-danger btn-xs"
                                     wire:click="deleteTrainingtime({{$trainingtime->id}})">
@@ -68,6 +68,17 @@
                         <a type="button" class="btn btn-primary btn-xs" href="/participations/{{$trainingtime->id}}">
                             <img src="/images/arrow-right-circle.svg" alt="" title="{{__('Go to trainingtime')}}">
                         </a>
+                        @if($trainingtime->users->pluck('id')->contains(auth()->id()))
+                            <a type="button" class="btn btn-danger btn-xs"
+                               wire:click="toggleParticipation({{$trainingtime->id}},{{auth()->id()}})">
+                                <img src="/images/dash-circle.svg" alt="" title="{{__('Cancel participation')}}">
+                            </a>
+                        @else
+                            <a type="button" class="btn btn-primary btn-xs"
+                               wire:click="toggleParticipation({{$trainingtime->id}},{{auth()->id()}})">
+                                <img src="/images/plus-circle.svg" alt="" title="{{__('Occupy training slot')}}">
+                            </a>
+                        @endif
                     </td>
                 </tr>
             @endforeach
