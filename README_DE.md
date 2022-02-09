@@ -13,9 +13,9 @@ Registrierte Athleten können eine der offenen Stellen für eine Trainingseinhei
 ## Dokumentation
 
 ### Serveranforderungen
-- PHP> = 7,4
-- Laravel> = 7
-- MySql> = 5.7
+- PHP> = 8.0.2
+- Laravel> = 9
+- MySql> = 8.0
 
 - optional:
     - git (auch gut, um die Software auf dem neuesten Stand zu halten)

@@ -13,9 +13,9 @@ Registered athletes can reserve one of the vacancies for a training session.
 ## Documentation
 
 ### Server Requirements
-- PHP >= 7.4
-- Laravel >= 7
-- MySql >= 5.7
+- PHP >= 8.0.2
+- Laravel >= 9
+- MySql >= 8.0
 
 - optional:
     - git (also good for keeping the software up to date )
